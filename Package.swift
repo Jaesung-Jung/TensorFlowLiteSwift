@@ -15,6 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "TensorFlowLite",
-            dependencies: ["TensorFlowLiteC"]),
+            dependencies: ["TensorFlowLiteC"],
+            linkerSettings: [
+                .linkedFramework("CoreML"),
+            ]),
     ]
 )
